@@ -2,18 +2,27 @@
     margin: 0px;
     padding: 0px;
 }
+:root{
+    --bg: #edddcc;
+    --header_bg: #dec5a9;
+    --border: #b4927b;
+}
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #edddcc;
+    background-color: var(--bg);
+}
+button{
+    cursor: pointer;
 }
 
 header {
-    background-color: #dec5a9;
+    background-color: var(--header_bg);
     display: flex;
     color: white;
-    padding: 2rem;
+    padding: 1rem;
     justify-content: space-between;
+    margin-bottom: 3rem;
 }
 .logo{
 }
@@ -21,14 +30,87 @@ header {
 }
 
 #avatar-container {
-    margin: 2em auto;
-    border: 2px solid #c4aa99;
+    margin: 1em auto;
+    border: 2px solid var(--border);
     width: 250px;
     height: 250px;
     position: relative;
 }
+/* #avatar-canvas{
+    object-fit: cover;
+} */
+
+canvas{
+    width: 250px;
+    height: 250px;
+}
 
 #item-container {
-    margin: 1rem 10rem;
-    border: 2px solid #c4aa99;
+    margin: 1rem 10rem 1rem 10rem;
+    border: 2px solid var(--border);
+    background-color: #ffffff;
 }
+
+.download{
+    padding: .7rem;
+    color: var(--border);
+    background-color: #fdf6f3;
+    border-radius: 20px;
+    border: none;
+    filter: drop-shadow(3px 3.5px 0px #b5927c);
+}
+
+.download:active{
+    color:white;
+    background-color: #b5927c;
+    filter: drop-shadow(3px 3.5px 0px #fdf6f3);
+}
+
+#features{
+    display: flex;
+}
+#features button{
+    border:var(--header_bg) solid;
+    padding: 0.3rem 1rem;
+    background-color: transparent;
+}
+
+#body{
+    display: flex;
+}
+
+.item{
+    width: 4rem;
+    margin: 1rem;
+    border:none;
+    border-radius: 200px;
+    cursor: pointer;
+}
+#color{
+    border: solid var(--header_bg);
+}
+#bodyColorFem, #bodyColorMal {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+    justify-content: center;
+}
+
+.color {
+    height: 30px;
+    width: 30px;
+    margin: 3px;
+    border-radius: 200px;
+    border: none;
+    cursor: pointer;
+}
+.selected{
+    height: 26px;
+    width: 26px;
+    padding: 2px;
+    border: rgb(44, 44, 44) solid 2px;
+}
+.bodyColor1 { background-color: #FFDFC4; }
+.bodyColor2 { background-color: #D1A184; }
+.bodyColor3 { background-color: #A8756A; }
+.bodyColor4 { background-color: #5B4636; }
