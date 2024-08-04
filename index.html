@@ -21,14 +21,46 @@
         </header>
         <div class="mainContainer">
             <div id="avatar-container">
-                <canvas id="avatar-canvas" width="250px" height="250px"></canvas>
+                <canvas id="avatar-canvas" width="1080px" height="1080px"></canvas>
             </div>
+            <div><button onclick="saveAvatar()" class="download">Download Avatar</button></div>
             <div id="item-container">
                 <div id="features">
-
+                    <button onclick="body()">Body</button>
+                    <button onclick="hair()">Hair</button>
+                    <button onclick="hijab()">Hijab</button>
+                    <button onclick="Eyebrow()">Eyebrow</button>
+                    <button onclick="Beard()">Beard</button>
+                    <button onclick="dress()">dress</button>
+                    <button onclick="accessory()">Accessory</button>
+                    <button onclick="jwellary()">Jwellary</button>
+                    <button onclick="Makeup()">Make Up</button>
+                    <button onclick="background()">Background</button>
+                </div>
+                <div id="color">
+                    <div id="bodyColorFem">
+                        <div class="color bodyColor1"></div>
+                        <div class="color bodyColor2"></div>
+                        <div class="color bodyColor3"></div>
+                        <div class="color bodyColor4"></div>
+                    </div>
+                    <div id="bodyColorMal">
+                        <div class="color bodyColor1"></div>
+                        <div class="color bodyColor2"></div>
+                        <div class="color bodyColor3"></div>
+                        <div class="color bodyColor4"></div>
+                    </div>
                 </div>
                 <div id="items">
-
+                    <div id="body">
+                        <div id="bodyFem">
+                            <img src="components/body/body.png"  class="item" id="body1">
+                        </div>
+                        <div id="bodyMal">
+                            <img src="components/body/body_male.png"  class="item" id="body2">
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
         </div>
