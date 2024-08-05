@@ -12,6 +12,23 @@ body {
     text-align: center;
     background-color: var(--bg);
 }
+.logo{
+    width: 8rem;
+    padding: .5rem 3rem;
+}
+.github{
+    padding-top: none;
+    margin-right: 3rem;
+    display: block;
+    font-size: 24px;
+    color: #472913;
+    background-color: transparent;
+    border: none;
+}
+a{
+    color: #472913;
+    text-decoration: none;
+}
 button {
     cursor: pointer;
 }
@@ -37,7 +54,7 @@ canvas {
 #item-container {
     margin: 1rem 10rem;
     border: 2px solid var(--border);
-    background-color: #ffffff;
+    background-color: #fef5f2;
 }
 .download {
     padding: .7rem;
@@ -54,32 +71,48 @@ canvas {
 }
 #features {
     display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto; 
+    overflow-y: hidden;
 }
 #features button {
     border: var(--header_bg) solid;
     padding: 0.3rem 1rem;
     background-color: transparent;
 }
+
+
 .item-group {
     display: none;
 }
 .item-group.active {
-    display: flex;
+    display: block;
+    text-align: left;  
 }
 .item {
     width: 4rem;
     margin: 1rem;
-    border: none;
+    background-color: #f3e6de;
     border-radius: 200px;
     cursor: pointer;
 }
+.none{
+    height: 4rem;
+    background-color: #f3e6de;
+    text-align: center;
+    display:block;
+
+}
+.none p{
+    transform: translateY(125%);
+}
 .selected {
-    border: 2px solid rgb(44, 44, 44);
+    border: .1rem solid rgb(44, 44, 44);
 }
 .color-options {
     display: flex;
     justify-content: center;
-    margin: 1rem;
+    margin: .5rem;
 }
 .color {
     height: 30px;
@@ -89,3 +122,43 @@ canvas {
     border: 1px solid #000;
     cursor: pointer;
 }
+
+#footer {
+    background-color: var(--border); 
+    color: #fff; 
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 6rem;
+}
+
+#footer-content {
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+#social-media p {
+    margin-bottom: 15px;
+    font-size: 1.2em; 
+}
+
+#social-media {
+    margin-bottom: 40px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    display: inline-block;
+    font-size: 1.5em;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle; 
+}
+
+#copyright {
+    font-size: 0.9em; /* Slightly smaller font size for the copyright text */
+}
+
