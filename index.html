@@ -2,16 +2,17 @@
 <html>
 <title>Avatar Me</title>
 <head>
-    <link rel="icon" href=""/>
+    <link rel="icon" href="components/icon.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="utf-8">
     <link rel="stylesheet" href="index.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <div class="logo">logo</div>
-        <div class="github">github link</div>
+        <img src="components/logo.png" class="logo">
+        <button class="github"><a href="https://github.com/SarafAnzumShreya"><i class="fa-brands fa-github"></i> GitHub</a></button>
     </header>
     <div class="mainContainer">
         <div id="avatar-container">
@@ -22,41 +23,135 @@
             <div id="features">
                 <button onclick="selectFeature('body')">Body</button>
                 <button onclick="selectFeature('hair')">Hair</button>
+                <button onclick="selectFeature('headcover')">Head Cover</button>
                 <button onclick="selectFeature('hijab')">Hijab</button>
                 <button onclick="selectFeature('eyebrow')">Eyebrow</button>
                 <button onclick="selectFeature('beard')">Beard</button>
                 <button onclick="selectFeature('dress')">Dress</button>
                 <button onclick="selectFeature('accessory')">Accessory</button>
-                <button onclick="selectFeature('jewelry')">Jewelry</button>
+                <button onclick="selectFeature('jewelry')">Jewellery</button>
                 <button onclick="selectFeature('makeup')">Make Up</button>
                 <button onclick="selectFeature('background')">Background</button>
             </div>
             <div id="color-options" class="color-options"></div>
             <div id="items">
                 <div id="body" class="item-group">
-                    <img src="components/body/body.png" class="item" id="body1">
-                    <img src="components/body/body_male.png" class="item" id="body2">
+                    <div class="item none" onclick="removeItem('body')"> <p>None</p> </div>
+                    <img src="components/body/female/f9cfba.png" class="item" id="body1">
+                    <img src="components/body/male/f9cfba.png" class="item" id="body2">
                 </div>
                 <div id="hair" class="item-group">
-                    <img src="components/hair/Female/Colour=Black, Type=Curly, Length=Long.png" class="item" id="hair1">
-                    <img src="components/hair/Female/Colour=Black, Type=Curly, Length=Mid.png" class="item" id="hair2">
-                    <img src="components/hair/Female/Colour=Black, Type=Fluffy, Length=Long.png" class="item" id="hair3">
+                    <!-- <img src="components/null.png" class="item none" onclick="removeItem('hair')"> -->
+                    <div class="item none" onclick="removeItem('hair')"> <p>None</p> </div>
+                    <img src="components/hair/Female/hair1/000000.png" class="item" id="hair1">
+                    <img src="components/hair/Female/hair2/000000.png" class="item" id="hair2">
+                    <img src="components/hair/Female/hair3/000000.png" class="item" id="hair3">
+                    <img src="components/hair/Female/hair4/000000.png" class="item" id="hair4">
+                    <img src="components/hair/Female/hair5/000000.png" class="item" id="hair5">
+                    <img src="components/hair/Female/hair6/000000.png" class="item" id="hair6">
+                    <img src="components/hair/Female/hair7/000000.png" class="item" id="hair7">
+                    <img src="components/hair/Female/hair8/000000.png" class="item" id="hair8">
+                    <img src="components/hair/Female/hair9/000000.png" class="item" id="hair9">
+                    <img src="components/hair/Female/hair10/000000.png" class="item" id="hair10">
+                    <img src="components/hair/Female/hair11/000000.png" class="item" id="hair11">
+                    <img src="components/hair/Female/hair12/000000.png" class="item" id="hair12">
+                    <img src="components/hair/Female/hair13/000000.png" class="item" id="hair13">
+                    <img src="components/hair/male/hair14/000000.png" class="item" id="hair14">
+                    <img src="components/hair/male/hair15/000000.png" class="item" id="hair15">
+                    <img src="components/hair/male/hair16/000000.png" class="item" id="hair16">
+                    <img src="components/hair/male/hair17/000000.png" class="item" id="hair17">
+                    <img src="components/hair/male/hair18/000000.png" class="item" id="hair18">
+                </div>
+                <div id="headcover" class="item-group">
+                    <div class="item none" onclick="removeItem('headcover')"> <p>None</p> </div>
+                    <img src="components/Hair cover/000000.png" class="item" id="headcover1">
+                </div>
+                <div id="hijab" class="item-group">
+                    <div class="item none" onclick="removeItem('hijab')"> <p>None</p> </div>
+                    <img src="components/hijab/000000.png" class="item" id="hijab1">
                 </div>
                 <div id="eyebrow" class="item-group">
-                    <img src="components/brow/brow.png" class="item" id="eyebrow1">
-                    <img src="components/eyebrow/eyebrow2.png" class="item" id="eyebrow2">
-                    <img src="components/eyebrow/eyebrow3.png" class="item" id="eyebrow3">
+                    <div class="item none" onclick="removeItem('eyebrow')"> <p>None</p> </div>
+                    <img src="components/brow/000000.png" class="item" id="eyebrow1">
                 </div>
                 <div id="beard" class="item-group">
-                    <img src="components/beard/beard.png" class="item" id="beard1">
-                    <img src="components/beard/beard2.png" class="item" id="beard2">
-                    <img src="components/beard/beard3.png" class="item" id="beard3">
+                    <div class="item none" onclick="removeItem('beard')"> <p>None</p> </div>
+                    <img src="components/beard/000000.png" class="item" id="beard1">
                 </div>
-                <!-- Add more item groups for other features -->
+                <div id="dress" class="item-group">
+                    <div class="item none" onclick="removeItem('dress')"> <p>None</p> </div>
+                    <img src="components/dress/dress1.png" class="item" id="dress1">
+                    <img src="components/dress/dress2.png" class="item" id="dress2">
+                    <img src="components/dress/shirt and tie.png" class="item" id="dress3">
+                    <img src="components/dress/Type=Grey Basic T-Shirt (1).png" class="item" id="dress4">
+                    <img src="components/dress/Type=Grey Jacket (1).png" class="item" id="dress5">
+                    <img src="components/dress/Type=Grey Sweater (1).png" class="item" id="dress6">
+                    <img src="components/dress/Type=Off White Basic T-Shirt.png" class="item" id="dress7">
+                    <img src="components/dress/Type=Off White Elegant Shirt (1).png" class="item" id="dress8">
+                    <img src="components/dress/Type=Off White Layered T-shirt.png" class="item" id="dress9">
+                    <img src="components/dress/Type=Orange Layered T-shirt.png" class="item" id="dress10">
+                    <img src="components/dress/Type=Pink Sweater.png" class="item" id="dress11">                    <img src="components/dress/Type=Violet Hoodie.png" class="item" id="dress12">
+                    <img src="components/dress/Type=Violet Sweater.png" class="item" id="dress13">
+                </div>
+                <div id="accessory" class="item-group">
+                    <div class="item none" onclick="removeItem('accessory')"> <p>None</p> </div>
+                    <img src="components/accessories/Type=Glasses Gold Frame.png" class="item" id="accessory1">
+                    <img src="components/accessories/Type=Glasses Grey Frame.png" class="item" id="accessory2">
+                    <img src="components/accessories/Type=Hair Clips.png" class="item" id="accessory3">
+                    <img src="components/accessories/Type=Hair Band.png" class="item" id="accessory4">
+                    <img src="components/accessories/Type=Hair Band black.png" class="item" id="accessory5">
+                </div>
+                <div id="jewelry" class="item-group">
+                    <div class="item none" onclick="removeItem('jewelry')"> <p>None</p> </div>
+                    <img src="components/jwellary/pearl earrings.png" class="item" id="jewelry1">
+                    <img src="components/jwellary/Type=Big Gold Hoop Earrings.png" class="item" id="jewelry2">
+                    <img src="components/jwellary/Type=Helix Earrings.png" class="item" id="jewelry3">
+                    <img src="components/jwellary/Type=Small Hoop Earrings.png" class="item" id="jewelry4">
+                    <img src="components/jwellary/Type=Violet Flower Earrings.png" class="item" id="jewelry5">
+                </div>
+                <div id="makeup" class="item-group">
+                    <div class="item none" onclick="removeItem('makeup')"> <p>None</p> </div>
+                    <img src="components/makeup/Type=Blush.png" class="item" id="makeup1">
+                    <img src="components/makeup/Type=Bold Violet Eyeshadow.png" class="item" id="makeup2">
+                    <img src="components/makeup/Type=Classic Red Lipstick.png" class="item" id="makeup3">
+                    <img src="components/makeup/Type=Dark Goth Lipstick.png" class="item" id="makeup4">
+                    <img src="components/makeup/Type=Full Glam Makeup.png" class="item" id="makeup5">
+                    <img src="components/makeup/Type=Heart-Shaped Blush.png" class="item" id="makeup6">
+                    <img src="components/makeup/Type=Neutral Eyeshadow.png" class="item" id="makeup7">
+                    <img src="components/makeup/Type=Pink Lipstick.png" class="item" id="makeup8">
+                </div>
+                <div id="background" class="item-group">
+                    <div class="item none" onclick="removeItem('background')"> <p>None</p> </div>
+                    <img src="components/background/bg1.png" class="item" id="background1">
+                    <img src="components/background/bg2.png" class="item" id="background2">
+                    <img src="components/background/bg3.png" class="item" id="background3">
+                    <img src="components/background/bg4.png" class="item" id="background4">
+                    <img src="components/background/bg5.png" class="item" id="background5">
+                    <img src="components/background/bg6.png" class="item" id="background6">
+                    <img src="components/background/bg7.png" class="item" id="background7">
+                    <img src="components/background/bg8.png" class="item" id="background8">
+                    <img src="components/background/bg9.png" class="item" id="background9">
+                    <img src="components/background/bg10.png" class="item" id="background10">
+                    <img src="components/background/bg11.png" class="item" id="background11">
+                </div>
             </div>
         </div>
     </div>
-    <footer></footer>
+    <footer id="footer">
+        <div id="footer-content">
+            <div id="social-media">
+                <p>Follow me on:</p>
+                <a href="https://www.linkedin.com/in/saraf-anzum-shreya-519275226"  class="social-icon"><span class="fa-brands fa-linkedin"></span></a>
+                <a href="https://www.github.com/SarafAnzumShreya" class="social-icon"><span class="fa-brands fa-github"></span></a>
+                <a href="https://www.facebook.com/anzumshreya"  class="social-icon"><span class="fa-brands fa-facebook"></span></a>
+                <a href="mailto:sasshreya2001@gmail.com" class="social-icon"><span class="fa-solid fa-envelope"><span><a>  
+            </div>
+            <div id="copyright">
+                <p>&copy; 2024 Saraf Anzum Shreya. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
     <script src="index.js"></script>
 </body>
 </html>
