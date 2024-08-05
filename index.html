@@ -1,72 +1,62 @@
 <!DOCTYPE html>
 <html>
-    <title>
-        Avatar Me
-    </title>
-    <head>
-        <link rel="icon" href=""/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="index.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    </head>
-    <body>
-        <header>
-            <div class="logo">
-                logo
+<title>Avatar Me</title>
+<head>
+    <link rel="icon" href=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">logo</div>
+        <div class="github">github link</div>
+    </header>
+    <div class="mainContainer">
+        <div id="avatar-container">
+            <canvas id="avatar-canvas" width="1080px" height="1080px"></canvas>
+        </div>
+        <div><button onclick="saveAvatar()" class="download">Download Avatar</button></div>
+        <div id="item-container">
+            <div id="features">
+                <button onclick="selectFeature('body')">Body</button>
+                <button onclick="selectFeature('hair')">Hair</button>
+                <button onclick="selectFeature('hijab')">Hijab</button>
+                <button onclick="selectFeature('eyebrow')">Eyebrow</button>
+                <button onclick="selectFeature('beard')">Beard</button>
+                <button onclick="selectFeature('dress')">Dress</button>
+                <button onclick="selectFeature('accessory')">Accessory</button>
+                <button onclick="selectFeature('jewelry')">Jewelry</button>
+                <button onclick="selectFeature('makeup')">Make Up</button>
+                <button onclick="selectFeature('background')">Background</button>
             </div>
-            <div class="github">
-                github link
-            </div>
-        </header>
-        <div class="mainContainer">
-            <div id="avatar-container">
-                <canvas id="avatar-canvas" width="1080px" height="1080px"></canvas>
-            </div>
-            <div><button onclick="saveAvatar()" class="download">Download Avatar</button></div>
-            <div id="item-container">
-                <div id="features">
-                    <button onclick="body()">Body</button>
-                    <button onclick="hair()">Hair</button>
-                    <button onclick="hijab()">Hijab</button>
-                    <button onclick="Eyebrow()">Eyebrow</button>
-                    <button onclick="Beard()">Beard</button>
-                    <button onclick="dress()">dress</button>
-                    <button onclick="accessory()">Accessory</button>
-                    <button onclick="jwellary()">Jwellary</button>
-                    <button onclick="Makeup()">Make Up</button>
-                    <button onclick="background()">Background</button>
+            <div id="color-options" class="color-options"></div>
+            <div id="items">
+                <div id="body" class="item-group">
+                    <img src="components/body/body.png" class="item" id="body1">
+                    <img src="components/body/body_male.png" class="item" id="body2">
                 </div>
-                <div id="color">
-                    <div id="bodyColorFem">
-                        <div class="color bodyColor1"></div>
-                        <div class="color bodyColor2"></div>
-                        <div class="color bodyColor3"></div>
-                        <div class="color bodyColor4"></div>
-                    </div>
-                    <div id="bodyColorMal">
-                        <div class="color bodyColor1"></div>
-                        <div class="color bodyColor2"></div>
-                        <div class="color bodyColor3"></div>
-                        <div class="color bodyColor4"></div>
-                    </div>
+                <div id="hair" class="item-group">
+                    <img src="components/hair/Female/Colour=Black, Type=Curly, Length=Long.png" class="item" id="hair1">
+                    <img src="components/hair/Female/Colour=Black, Type=Curly, Length=Mid.png" class="item" id="hair2">
+                    <img src="components/hair/Female/Colour=Black, Type=Fluffy, Length=Long.png" class="item" id="hair3">
                 </div>
-                <div id="items">
-                    <div id="body">
-                        <div id="bodyFem">
-                            <img src="components/body/body.png"  class="item" id="body1">
-                        </div>
-                        <div id="bodyMal">
-                            <img src="components/body/body_male.png"  class="item" id="body2">
-                        </div>
-                        
-                    </div>
+                <div id="eyebrow" class="item-group">
+                    <img src="components/brow/brow.png" class="item" id="eyebrow1">
+                    <img src="components/eyebrow/eyebrow2.png" class="item" id="eyebrow2">
+                    <img src="components/eyebrow/eyebrow3.png" class="item" id="eyebrow3">
                 </div>
+                <div id="beard" class="item-group">
+                    <img src="components/beard/beard.png" class="item" id="beard1">
+                    <img src="components/beard/beard2.png" class="item" id="beard2">
+                    <img src="components/beard/beard3.png" class="item" id="beard3">
+                </div>
+                <!-- Add more item groups for other features -->
             </div>
         </div>
-        <footer>
-
-        </footer>
-        <script src="index.js"></script>
-    </body>
+    </div>
+    <footer></footer>
+    <script src="index.js"></script>
+</body>
 </html>
