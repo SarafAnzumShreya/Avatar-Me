@@ -91,6 +91,12 @@
     button {
         cursor: pointer;
     }
+    .buttons button{
+        width: 6rem;
+        margin-left: 0.2rem;
+        margin-right: 0.2rem;
+
+    }
     header {
         background-color: var(--header_bg);
         display: flex;
