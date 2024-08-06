@@ -1,5 +1,6 @@
 const canvas = document.getElementById('avatar-canvas');
 const ctx = canvas.getContext('2d');
+var preloader = document.getElementById("preloader");
 
 let selectedItems = {
     background: null,
@@ -145,5 +146,7 @@ window.onload = () => {
     Object.keys(selectedItems).forEach(feature => {
         getRandomItem(feature);
     });
+
+    preloader.style.display="none";
 
 };
