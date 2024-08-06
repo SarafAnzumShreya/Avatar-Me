@@ -37,27 +37,27 @@
     @keyframes animation{
         0% { border-top: #361d0c solid var(--prebor);
             border-left: var(--prebor) solid #94542f;
-            border-right: var(--prebor) solid #da8859;
-            border-bottom: var(--prebor) solid #ffe9dc; }
-        20% { border-left: #361d0c solid var(--prebor);
-            border-right: var(--prebor) solid #94542f;
             border-bottom: var(--prebor) solid #da8859;
-            border-top: var(--prebor) solid #ffe9dc; }
-        40% { border-right: #361d0c solid var(--prebor);
+            border-right: var(--prebor) solid #ffe9dc; }
+        20% { border-left: #361d0c solid var(--prebor);
             border-bottom: var(--prebor) solid #94542f;
+            border-right: var(--prebor) solid #da8859;
+            border-top: var(--prebor) solid #ffe9dc; }
+        40% { border-bottom: #361d0c solid var(--prebor);
+            border-right: var(--prebor) solid #94542f;
             border-top: var(--prebor) solid #da8859;
             border-left: var(--prebor) solid #ffe9dc; }
-        60% { border-bottom: #361d0c solid var(--prebor);
+        60% { border-right: #361d0c solid var(--prebor);
             border-top: var(--prebor) solid #94542f;
             border-left: var(--prebor) solid #da8859;
-            border-right: var(--prebor) solid #ffe9dc; }
+            border-bottom: var(--prebor) solid #ffe9dc; }
         80% { border-top: #361d0c solid var(--prebor);
             border-left: var(--prebor) solid #94542f;
-            border-right: var(--prebor) solid #da8859;
-            border-bottom: var(--prebor) solid #ffe9dc; }
-        100% { border-left: #361d0c solid var(--prebor);
-            border-right: var(--prebor) solid #94542f;
             border-bottom: var(--prebor) solid #da8859;
+            border-right: var(--prebor) solid #ffe9dc; }
+        100% { border-left: #361d0c solid var(--prebor);
+            border-bottom: var(--prebor) solid #94542f;
+            border-right: var(--prebor) solid #da8859;
             border-top: var(--prebor) solid #ffe9dc; }
     }
     
@@ -121,6 +121,13 @@
         border: 2px solid var(--border);
         background-color: #fef5f2;
     }
+    #items{
+        width: 100%;
+        background-color: #fef5f2;
+        overflow-y: auto; 
+        max-height: 13rem; 
+    }
+    
     .download {
         padding: .7rem;
         color: var(--border);
@@ -140,12 +147,15 @@
         overflow-x: auto; 
         overflow-y: hidden;
     }
-    #features button {
+    .feature_button {
         border: var(--header_bg) solid;
         padding: 0.3rem 1rem;
-        background-color: transparent;
+        background-color: #fef5f2;
     }
-
+    .feature_selected{
+        background-color: var(--border);
+        color: #fef5f2;
+    }
 
     .item-group {
         display: none;
