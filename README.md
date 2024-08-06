@@ -4,4 +4,4 @@
 </div>
 <br>
 <h3 align="center"><a href="https://sarafanzumshreya.github.io/Avatar-Me/" target="_blank"> Create Your Own Avatar</h3><br><br><br>
-<p align="center"> Credit to @chudzikson pon instagram for most of the drawings. </p>
+<p align="center"> Credit to @chudzikson on instagram for providing most of the drawings. </p>
