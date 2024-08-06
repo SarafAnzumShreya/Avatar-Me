@@ -105,6 +105,15 @@ function saveAvatar() {
     link.href = canvas.toDataURL('image/png');
     link.click();
 }
+function reset() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (const key in selectedItems) {
+        if (selectedItems[key] && selectedItems[key].classList) {
+            selectedItems[key].classList.remove('selected');
+        }
+        selectedItems[key] = null;
+    }
+}
 
 function showColorOptions(feature) {
     const colorOptionsDiv = document.getElementById('color-options');
