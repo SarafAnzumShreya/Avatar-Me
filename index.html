@@ -27,7 +27,10 @@
         <div id="avatar-container">
             <canvas id="avatar-canvas" width="1080px" height="1080px"></canvas>
         </div>
-        <div><button onclick="saveAvatar()" class="download">Download Avatar</button></div>
+        <div class="buttons">
+            <button onclick="reset()" class="download">Reset</button>
+            <button onclick="saveAvatar()" class="download">Download</button>
+        </div>
         <div id="item-container">
             <div id="features">
                 <button onclick="selectFeature('body')">Body</button>
@@ -89,7 +92,9 @@
                 </div>
                 <div id="beard" class="item-group">
                     <div class="item none" onclick="removeItem('beard')"> <p>None</p> </div>
-                    <img src="components/beard/000000.png" class="item" id="beard1">
+                    <img src="components/beard/beard1/000000.png" class="item" id="beard1">
+                    <img src="components/beard/beard2/000000.png" class="item" id="beard2">
+                    <img src="components/beard/beard3/000000.png" class="item" id="beard3">
                 </div>
                 <div id="dress" class="item-group">
                     <div class="item none" onclick="removeItem('dress')"> <p>None</p> </div>
