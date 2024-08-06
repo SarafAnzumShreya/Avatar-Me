@@ -268,7 +268,10 @@
         padding: .5rem 1.6rem;
     } 
     #item-container {
-        margin: 1rem 3rem;
+        margin: 1rem 2.5rem;
+    }
+    .item {
+        margin: .3rem;
     }
 }
 
@@ -280,6 +283,6 @@
         padding: .5rem 1rem;
     } 
     #item-container {
-        margin: 1rem 1rem;
+        margin: 1rem 1.2rem;
     }
 }
