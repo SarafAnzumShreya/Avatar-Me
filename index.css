@@ -26,10 +26,10 @@
         width: 4rem;
         height: 4rem;
         background-color: transparent;
-        border-top: #361d0c solid var(--prebor);
-        border-left: var(--prebor) solid #94542f;
+        border-left: #361d0c solid var(--prebor);
+        border-bottom: var(--prebor) solid #94542f;
         border-right: var(--prebor) solid #da8859;
-        border-bottom: var(--prebor) solid #ffe9dc;
+        border-top: var(--prebor) solid #ffe9dc; 
         border-radius: 50%;
         animation: animation 3s ease infinite;
     }
