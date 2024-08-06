@@ -58,12 +58,17 @@ async function drawAvatar() {
     }
 }
 
-function selectFeature(feature) {
+function selectFeature(feature, fea) {
     document.querySelectorAll('.item-group').forEach(group => {
         group.classList.remove('active');
     });
+    document.querySelectorAll('.feature_button').forEach(btn => {
+        btn.classList.remove('feature_selected');
+    });
     document.getElementById(feature).classList.add('active');
+    document.getElementById(fea).classList.add('feature_selected');
     showColorOptions(feature);
+
 }
 
 function selectItem(feature, item) {
@@ -151,7 +156,7 @@ function getRandomItem(group) {
 }
 
 window.onload = () => {
-    selectFeature('body');
+    selectFeature('body', 'bodyF');
     Object.keys(selectedItems).forEach(feature => {
         getRandomItem(feature);
     });
