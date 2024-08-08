@@ -73,7 +73,6 @@ function selectFeature(feature, fea) {
 
 function selectItem(feature, item) {
     if (item.classList.contains('none')) {
-        // Remove the feature if 'none' is selected
         if (selectedItems[feature]) {
             selectedItems[feature].classList.remove('selected');
         }
