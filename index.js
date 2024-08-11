@@ -48,6 +48,8 @@ async function drawAvatar() {
     const bodyImage = selectedItems.body ? await loadImage(selectedItems.body.src) : null;
     if (bodyImage) {
         ctx.drawImage(bodyImage, 0, 0, canvas.width, canvas.height);
+        const bodyColor = selectedItems.body.src.split('/').pop().replace('.png', '');
+        document.getElementById('bald').src=`components/hair/male/bald/${bodyColor}.png`;
     }
 
     // Draw other features
@@ -68,7 +70,6 @@ function selectFeature(feature, fea) {
     document.getElementById(feature).classList.add('active');
     document.getElementById(fea).classList.add('feature_selected');
     showColorOptions(feature);
-
 }
 
 function selectItem(feature, item) {
@@ -122,6 +123,7 @@ function reset() {
 function showColorOptions(feature) {
     const colorOptionsDiv = document.getElementById('color-options');
     colorOptionsDiv.innerHTML = '';
+    
     if (colorOptions[feature]) {
         colorOptions[feature].forEach(color => {
             const colorDiv = document.createElement('div');
@@ -134,6 +136,7 @@ function showColorOptions(feature) {
         });
     }
 }
+
 
 function changeColor(feature, color) {
     const selectedItem = selectedItems[feature];
